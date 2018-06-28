@@ -263,52 +263,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = AUH_restoration_HUN_tt
 			set_global_flag = form_austria_hungary_flag
-			hidden_effect = {
-			news_event = { id = news.295 }
-			9 = { add_core_of = AUH }
-			39 = { add_core_of = AUH }
-			69 = { add_core_of = AUH }
-			70 = { add_core_of = AUH }
-			71 = { add_core_of = AUH }
-			72 = { add_core_of = AUH }
-			73 = { add_core_of = AUH }
-			74 = { add_core_of = AUH }
-			75 = { add_core_of = AUH }
-			664 = { add_core_of = AUH }
-			AUS = {
-				random_owned_controlled_state = {
-					AUH = { transfer_state = PREV }
-				}
-			}
-			AUH = {	change_tag_from = HUN }
-			AUS = {
-				AUH = {
-					transfer_technology = yes
-				}
-				every_unit_leader = {
-					set_unit_leader_flag = AUS_leader
-					set_nationality = AUH
-				}
-			}
-			annex_country = { target = AUS transfer_troops = yes }
-			change_tag_from = AUS
-			HUN = {
-				AUH = {
-					transfer_technology = yes
-				}
-				every_unit_leader = {
-					set_unit_leader_flag = HUN_leader
-					set_nationality = AUH
-				}
-			}
-			#every_state = {
-			#	limit = { OR = { is_core_of = HUN is_core_of = AUS } }
-			#	
-			#	add_core_of = AUH
-			#}
-			
-			AUH = { annex_country = { target = HUN transfer_troops = yes } }
-			}
+			AUS = { country_event = { id = austria-hungary.1 hours = 2 } }
 		}
 	}
 	

@@ -1,9 +1,40 @@
 ﻿l_english:
  
- AUH_restoration_HUN_tt:0 "If Austria accepts, this will reunite both countries and create Austria-Hungary. This will give you a new focus tree - along with all techs, generals and divisions from both countries merging. If they don't accept, you will get a war goal and after conquering Austria, get a chance to form Austria-Hungary through a decision."
+ HUN_the_restoration_of_austria_hungary:0 "Restore The Empire"
+ HUN_the_restoration_of_austria_hungary_desc:0 "Austria-Hungary was a consitutional union of Austria and Hungary that existed from 1867 to 1918, when it collapsed due to The Great War. Following said war, many nations would become independent such as Czechoslovakia, Yugoslavia and a few others. However, if Austria accepts our proposal - the empire might have another shot..."
+ AUH_restoration_HUN_tt:0 "If Austria accepts, this will reunite both countries and create Austria-Hungary. This will merge all units, generals and techs from both countries into one. You will also get a unique focus tree. If they don't accept, you will get a war goal and after conquering Austria, get a chance to form Austria-Hungary through a decision.\n"
+ AUH_restoration_HUN_yes_tt:0 "This will reunite both countries and create Austria-Hungary. \n§RNOTE: This is in an early stage of development!§!\n"
+ AUH_restoration_HUN_no_tt:0 "Hungary earns a war goal against Austria and will be able to form Austria-Hungary through a decision if sucessful! This will merge all units, generals and techs from both countries into one. You will also get a unique focus tree.\n"
+ 
+ AUH_restoration_HUN_referendum_tt:0 "This will start a nationwide referendum and the people will decide the fate of Austria!\n"
+ AUH_restoration_HUN_government_tt:0 "This will allow you to choose by yourself - but the Austrian people will not like it.\n"
+ 
+ AUH_gameover_tt:0 "\n§RIMPORTANT: If Austria-Hungary is formed, the game might end (for one person) if there are two people playing as both Austria and Hungary.§!\n"
  
  AUH_the_czech_situation:0 "The Czech Situation"
  AUH_the_czech_situation_desc:0 "Czechoslovakia has, since its independence, grown powerful and industrious, but their lands are eyed greedily by their neighbors. We will offer them our protection against these threats, either by welcoming them once again as an integral part of our Empire, or by granting them association status."
  
- HUN_the_restoration_of_austria_hungary:0 "Restoration of Austria-Hungary"
- HUN_the_restoration_of_austria_hungary_desc:0 "It's time to go back to one of Europe's mightiest empires! But first, we need to ask if the Austrians support this unification."
+ austria-hungary.1.t:0 "Hungary Demands Restoration of Austria-Hungary!"
+ austria-hungary.1.desc:0 "In a speech in Budapest, [HUN.GetLeader] has demanded that his Austrian subjects be permitted to return to his rule. In a gesture of reconciliation, however, he has publicly noted that the Austrian people should be permitted to make that choice for themselves."
+ austria-hungary.1.a:0 "Hold a nationwide referendum!"
+ austria-hungary.1.b:0 "Let the government handle this."
+ 
+ austria-hungary.2.t:0 "Referendum Results: Yes"
+ austria-hungary.2.desc:0 "After running the referendum - it has been revealed that the Austrian people support the restoration of Austria-Hungary. We should send these reports to the Hungarian government immediately and begin negotiations."
+ austria-hungary.2.a:0 "The people have made their choice."
+ 
+ austria-hungary.3.t:0 "Referendum Results: No"
+ austria-hungary.3.desc:0 "After running the referendum - it has been revealed that the Austrian people do not support the restoration of Austria-Hungary and would rather remain independent instead! We should send these reports to the Hungarian government and see their response."
+ austria-hungary.3.a:0 "The people have made their choice."
+ 
+ austria-hungary.5.t:0 "Austria Accepts"
+ austria-hungary.5.desc:0 "The Austrian government reports that the referendum has concluded and that the Austrian people support the restoration of Austria-Hungary. We should begin to merge our two countries immediately."
+ austria-hungary.5.a:0 "As predicted."
+ 
+ auh.news.1.t:0 "Austria Holds Nationwide Referendum"
+ auh.news.1.desc:0 "Following the Hungarian demand of restoring Austria-Hungary - the Austrian government has decided to hold a nationwide referendum and let the people decide the country's fate. The referendum is expected to take place in about a week.\n\nThe streets are already filled with speeches on people reflecting their opinions on the subject."
+ auh.news.1.a:0 "Let's hope the people make the right choice!"
+ 
+ auh.news.2.t:0 "The Restoration of Austria-Hungary"
+ auh.news.2.desc:0 "With the Austrian referendum completed, the Hungarian government has gathered international press in Budapest and announced the restoration of Austria-Hungary following the "Yes" majority in the Austrian referendum.\n\nKing Otto has assumed his rightful title as Emperor of Austria, and has reiterated his vow that, though the Empire is yet but a shadow of its former self, he shall not rest until all Habsburg lands have been reunited. Their neighbours undoubtedly eye the proceedings in Budapest suspiciously."
+ auh.news.2.a:0 "Like a phoenix from the ashes."

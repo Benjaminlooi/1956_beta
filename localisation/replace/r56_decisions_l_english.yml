@@ -14,7 +14,11 @@
  TUR_fascist_category_desc:0 "After the humiliation of our defeat in the Great War, we rose first to protect our homeland against the Yunanlılar but Ataturk only stabilized our borders. With the rise of our movement, we can reclaim our heritage and restore our imperial domain."
  r56_TUR_reclaim_the_tomb_of_suleiman_shah:0 "Reclaim the Tomb of Suleiman Shah" 
  
- 
+ ###---> Austria-Hungary <><> <><> <><>
+ r56_form_austria_hungary_category:0 "The Restoration of Austria-Hungary"
+ r56_form_austria_hungary_category_desc:0 "Austria-Hungary was a consitutional union of Austria and Hungary that existed from 1867 to 1918, when it collapsed due to The Great War. Following said war, many nations would become independent such as Czechoslovakia, Yugoslavia and a few others. However, with the right territories we can return to the glory days of the empire!"
+ AUS_restore_austria_hungary:0 "Restore Austria-Hungary"
+ HUN_restore_austria_hungary:0 "Restore Austria-Hungary"
  
  r56_send_combat_reports_to_the_small_arms_manufacturers:0 "Send Combat Reports to the Small Arms Manufacturers"
  r56_send_combat_reports_to_the_artillery_manufacturers:0 "Send Combat Reports to the Artillery Manufacturers"

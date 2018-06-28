@@ -118,7 +118,7 @@ create_country_leader = {
 
 create_field_marshal = {
 	name = "Wilhelm Zehner" # General of the Infantry, "Father of the Austrian Army"
-	portrait_path = "gfx/leaders/EYE/Portrait_EYE_Wilhelm_Zehner.dds"
+	portrait_path = "gfx/leaders/AUS/Portrait_AUS_Wilhelm_Zehner.dds"
 	traits = { brilliant_strategist war_hero infantry_officer inspirational_leader trait_mountaineer }
 	skill = 4
 	attack_skill = 5

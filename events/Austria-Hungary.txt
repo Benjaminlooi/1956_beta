@@ -1,0 +1,172 @@
+﻿add_namespace = austria-hungary
+	
+	#HUN Restoration of Austria-Hungary: Austrian Choice
+	country_event = {
+		id = austria-hungary.1
+		title = austria-hungary.1.t
+		desc = austria-hungary.1.desc
+		picture = GFX_report_event_election_vote
+		
+		is_triggered_only = yes
+		
+		option = { #Referendum
+			name = austria-hungary.1.a
+			custom_effect_tooltip = AUH_gameover_tt
+			ai_chance = {
+				factor = 50
+				modifier = {
+					has_government = democratic
+					factor = 95
+				}
+				modifier = {
+					has_government = neutrality
+					has_government = fascism
+					factor = 15
+				}
+				modifier = {
+					has_government = communism
+					factor = 2
+				}
+			}
+			random_list = { #Plan: Add more ways to alter people's opinions.
+				60 = { AUS = { country_event = { id = austria-hungary.2 hours = 168 } } } #Votes Yes
+				40 = { AUS = { country_event = { id = austria-hungary.3 hours = 168 } } } #Votes No
+			}
+			if = {
+				has_government = democratic
+				75 = { AUS = { country_event = { id = austria-hungary.2 hours = 168 } } } #Votes Yes
+				25 = { AUS = { country_event = { id = austria-hungary.3 hours = 168 } } } #Votes No
+				
+				OR = {
+					has_government = communism
+					2 = { AUS = { country_event = { id = austria-hungary.2 hours = 168 } } } #Votes Yes
+					98 = { AUS = { country_event = { id = austria-hungary.3 hours = 168 } } } #Votes No
+				}
+			}
+			custom_effect_tooltip = AUH_restoration_HUN_referendum_tt
+			news_event = { id = auh.news.1 }
+		}
+		option = { #Government
+			name = austria-hungary.1.b
+			ai_chance = {
+				factor = 50
+				modifier = {
+					has_government = communism
+					factor = 98
+				}
+				modifier = {
+					has_government = neutrality
+					has_government = fascism
+					factor = 85
+				}
+				modifier = {
+					has_government = democratic
+					factor = 5
+				}
+			}
+			custom_effect_tooltip = AUH_restoration_HUN_government_tt
+			AUS = { country_event = { id = austria-hungary.4 hours = 2 } }
+		}
+	}
+	
+	#HUN Restoration of Austria-Hungary: Referendum Results (Yes)
+	country_event = {
+		id = austria-hungary.2
+		title = austria-hungary.2.t
+		desc = austria-hungary.2.desc
+		picture = GFX_report_event_election_vote
+		
+		is_triggered_only = yes
+		
+		option = { #Send Result To Hungary
+			name = austria-hungary.2.a
+			custom_effect_tooltip = AUH_gameover_tt
+			HUN = { country_event = { id = austria-hungary.5 hours = 2 } }
+		}
+	}
+	
+	#HUN Restoration of Austria-Hungary: Referendum Results (No)
+	country_event = {
+		id = austria-hungary.3
+		title = austria-hungary.3.t
+		desc = austria-hungary.3.desc
+		picture = GFX_report_event_election_vote
+		
+		is_triggered_only = yes
+		
+		option = { #Send Result To Hungary
+			name = austria-hungary.3.a
+			HUN = { country_event = { id = austria-hungary.6 hours = 2 } }
+		}
+	}
+	
+	#HUN Restoration of Austria-Hungary: Government Choice
+	
+	#HUN Restoration of Austria-Hungary: Austria Accepts (Referendum)
+	country_event = {
+		id = austria-hungary.5
+		title = austria-hungary.5.t
+		desc = austria-hungary.5.desc
+		picture = GFX_report_event_election_vote
+		
+		
+		fire_only_once = yes
+		
+		is_triggered_only = yes
+		
+		option = { #Form Austria-Hungary
+			name = austria-hungary.5.a
+			custom_effect_tooltip = AUH_restoration_HUN_yes_tt
+			custom_effect_tooltip = AUH_gameover_tt
+			set_global_flag = form_austria_hungary_flag
+			hidden_effect = {
+			news_event = { id = auh.news.3 }
+			9 = { add_core_of = AUH }
+			39 = { add_core_of = AUH }
+			69 = { add_core_of = AUH }
+			70 = { add_core_of = AUH }
+			71 = { add_core_of = AUH }
+			72 = { add_core_of = AUH }
+			73 = { add_core_of = AUH }
+			74 = { add_core_of = AUH }
+			75 = { add_core_of = AUH }
+			664 = { add_core_of = AUH }
+			AUS = {
+				random_owned_controlled_state = {
+					AUH = { transfer_state = PREV }
+				}
+			}
+			AUH = {	change_tag_from = HUN }
+			AUS = {
+				AUH = {
+					transfer_technology = yes
+				}
+				every_unit_leader = {
+					set_unit_leader_flag = AUS_leader
+					set_nationality = AUH
+				}
+			}
+			AUH = { annex_country = { target = AUS transfer_troops = yes } }
+			AUH = { change_tag_from = AUS }
+			HUN = {
+				AUH = {
+					transfer_technology = yes
+				}
+				every_unit_leader = {
+					set_unit_leader_flag = HUN_leader
+					set_nationality = AUH
+				}
+			}
+			
+			AUH = { annex_country = { target = HUN transfer_troops = yes } }
+			}
+		}
+	}
+	
+	#HUN Restoration of Austria-Hungary: Austria Declines (Referendum)
+	
+	#HUN Restoration of Austria-Hungary: Austria Accepts (Government)
+	
+	#HUN Restoration of Austria-Hungary: Austria Declines (Government)
+	
+	#Austria Holds A Referendum

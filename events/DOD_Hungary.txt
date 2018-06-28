@@ -1444,7 +1444,7 @@ country_event = {
 
 	option = {# Prepare for war!
 		name = DOD_hungary.53.b
-		HUN = { country_event = { id = DOD_hungary.54 hours = 24 } }
+		AUH = { country_event = { id = DOD_hungary.54 hours = 24 } }
 		ai_chance = {
 			factor = 35
 			modifier = {
@@ -2048,7 +2048,7 @@ country_event = {
 		}
 		add_threat = 1
 		give_guarantee = ROM
-		HUN = { country_event = { id = DOD_hungary.62 } }
+		AUH = { country_event = { id = DOD_hungary.62 } }
 	}
 
 	option = {# let them work it out
@@ -2510,7 +2510,7 @@ country_event = {
 	option = {# accept
 		name = DOD_hungary.70.a
 		add_stability = 0.05
-		HUN = { transfer_state = 76 }
+		AUH = { transfer_state = 76 }
 		remove_ideas = HUN_war_preparation
 	}
 }

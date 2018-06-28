@@ -325,71 +325,14 @@ form_gran_colombia_category = {
 	}
 }
 
-form_austria_hungary_category = {
+form_r56_austria_hungary_category = {
 	
 	HUN_restore_austria_hungary = {
-	
+		
 		icon = generic_form_nation
-
+		
 		allowed = {
 			original_tag = HUN
-			has_dlc = "Waking the Tiger"
-		}
-
-		available = {
-			is_subject = no
-			controls_state = 155
-			controls_state = 43
-			controls_state = 154
-			controls_state = 102
-			controls_state = 103
-			controls_state = 104
-			controls_state = 109
-			controls_state = 45
-			controls_state = 83
-			controls_state = 76
-			controls_state = 84
-		}
-
-		visible = {
-			tag = HUN
-			has_completed_focus = HUN_proclaim_the_restoration_of_austria_hungary
-			NOT = { has_global_flag = reintegrate_the_empire_flag }
-		}
-
-		complete_effect = {
-			155 = { add_core_of = ROOT }
-			43 = { add_core_of = ROOT }
-			154 = { add_core_of = ROOT }
-			102 = { add_core_of = ROOT }
-			103 = { add_core_of = ROOT }
-			104 = { add_core_of = ROOT }
-			109 = { add_core_of = ROOT }
-			45 = { add_core_of = ROOT }
-			83 = { add_core_of = ROOT }
-			76 = { add_core_of = ROOT }
-			84 = { add_core_of = ROOT }
-			39 = { add_core_of = ROOT }
-			163 = { add_core_of = ROOT }
-			736 = { add_core_of = ROOT }
-			set_global_flag = reintegrate_the_empire_flag
-		}
-
-		ai_will_do = {
-			factor = 200
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-	}
-	
-	AUS_restore_austria_hungary = {
-	
-		icon = generic_form_nation
-
-		allowed = {
-			original_tag = AUS
 		}
 		
 		available = {
@@ -401,41 +344,32 @@ form_austria_hungary_category = {
 			controls_state = 154
 			controls_state = 155
 		}
-
+		
 		visible = {
-			tag = AUS
-			has_completed_focus = AUS_hungary_says_no
-			NOT = { has_global_flag = reintegrate_the_empire_flag }
+			tag = HUN
+			controls_state = 4
+			controls_state = 43
+			controls_state = 152
+			controls_state = 153
+			controls_state = 154
+			controls_state = 155
 		}
-
+		
 		complete_effect = {
-			155 = { add_core_of = ROOT }
-			43 = { add_core_of = ROOT }
-			154 = { add_core_of = ROOT }
-			102 = { add_core_of = ROOT }
-			103 = { add_core_of = ROOT }
-			104 = { add_core_of = ROOT }
-			109 = { add_core_of = ROOT }
-			45 = { add_core_of = ROOT }
-			83 = { add_core_of = ROOT }
-			76 = { add_core_of = ROOT }
-			84 = { add_core_of = ROOT }
-			39 = { add_core_of = ROOT }
-			163 = { add_core_of = ROOT }
-			736 = { add_core_of = ROOT }
-			set_global_flag = reintegrate_the_empire_flag
+			custom_effect_tooltip = AUH_restoration_HUN_yes_tt
+			set_global_flag = form_austria_hungary_flag
 			hidden_effect = {
-			HUN = {
-				random_owned_controlled_state = {
-					AUH = { transfer_state = PREV }
-				}
-			}
-			AUH = {	change_tag_from = AUS }
-			HUN = {
-				AUH = {
-					transfer_technology = yes
-				}
-			}
+			9 = { add_core_of = AUH }
+			39 = { add_core_of = AUH }
+			69 = { add_core_of = AUH }
+			70 = { add_core_of = AUH }
+			71 = { add_core_of = AUH }
+			72 = { add_core_of = AUH }
+			73 = { add_core_of = AUH }
+			74 = { add_core_of = AUH }
+			75 = { add_core_of = AUH }
+			664 = { add_core_of = AUH }
+			AUH = {	change_tag_from = HUN }
 			AUS = {
 				AUH = {
 					transfer_technology = yes
@@ -445,13 +379,17 @@ form_austria_hungary_category = {
 					set_nationality = AUH
 				}
 			}
-			every_state = {
-				limit = { OR = { is_core_of = AUS is_core_of = HUN } }
-				
-				add_core_of = AUH
+			HUN = {
+				AUH = {
+					transfer_technology = yes
+				}
+				every_unit_leader = {
+					set_unit_leader_flag = HUN_leader
+					set_nationality = AUH
+				}
 			}
 			
-			AUH = { annex_country = { target = AUS transfer_troops = yes } }
+			AUH = { annex_country = { target = HUN transfer_troops = yes } }
 			}
 		}
 		

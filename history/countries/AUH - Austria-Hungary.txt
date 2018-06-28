@@ -24,11 +24,11 @@ set_politics = {
 	
 	parties = {
 		neutrality = {
-			popularity = 48
+			popularity = 60
 		}
 		
 		fascism = {
-			popularity = 40
+			popularity = 28
 		}
 		
 		democratic = {
@@ -52,6 +52,17 @@ create_country_leader = {
 	picture = GFX_Portrait_hungary_otto_von_hapsburg
 	expire = "1965.1.1"
 	ideology = despotism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Otto von Habsburg"
+	desc = "POLITICS_OTTO_VON_HABSBURG_DESC"
+	picture = GFX_Portrait_hungary_otto_von_hapsburg
+	expire = "1965.1.1"
+	ideology = fascism_ideology
 	traits = {
 		#
 	}
