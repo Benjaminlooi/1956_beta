@@ -643,7 +643,7 @@ focus_tree = {
 
 	focus = {
 		id = CAN_department_of_munitions_and_supply
-		icon = GFX_goal_generic_build_tank
+		icon = GFX_goal_ammunitions
 		prerequisite = { focus = CAN_war_bonds }
 		x = -3
 		y = 1

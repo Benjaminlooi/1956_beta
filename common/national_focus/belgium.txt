@@ -9,9 +9,6 @@ focus_tree = {
             tag = BEL
         }
     }
-	
-	continuous_focus_position = { x = 0 y = 1000 }
-	
     focus = {
         id = tblra_go_left
         icon = GFX_focus_generic_soviet_politics
@@ -162,7 +159,7 @@ focus_tree = {
 			factor = 5
 		}
 		bypass = {
-		  	FRA = {has_completed_focus = FRA_status_quo}
+		  	FRA = {has_completed_focus = FRA_support_status_quo}
 		}		
         available = {
 			has_government = communism
@@ -235,8 +232,8 @@ focus_tree = {
 			add_ideas = tblra_centralized_communist_government
 			set_rule = { can_create_factions = yes }
 			add_stability = 0.05
-			add_war_support = 0.1
-			add_political_power = 50			
+			add_war_support = 0.05
+			add_opinion_modifier = { target = SOV modifier = faction_traitor }			
     }
 }	
     focus = { 
@@ -488,7 +485,7 @@ focus_tree = {
 	}
    focus = {
         id = tblra_technology_sharing_communism
-        icon = GFX_goal_communist_brain
+        icon = GFX_goal_generic_scientific_exchange
         prerequisite = { focus = tblra_independent_revolution focus = tblra_sign_pact_with_soviets }
 		available = {
 			has_government = communism
@@ -978,8 +975,8 @@ focus_tree = {
 			GER = {has_government = fascism}
 			GER = {
 				is_in_faction_with = BEL
-				}
 			}
+		}
         completion_reward = {
                     GER = {
                         country_event = { id = tblra.7 days = 1 }
@@ -1252,10 +1249,16 @@ focus_tree = {
         icon = GFX_goal_trade_pact
         prerequisite = { focus = tblra_democratic_influence }
         available = {
-			AND = {
-				is_puppet = no
-				HOL = {is_puppet = no}
-				LUX = {is_puppet = no}
+			is_puppet = no
+			HOL = {is_puppet = no}
+			LUX = {is_puppet = no}
+			NOT = {
+				OR = {
+					has_global_flag = HOL_benelux_customs_union_denied
+					HOL = {
+						has_completed_focus = HOL_join_belgo_luxembourgian_customs_union
+					}
+				}
 			}
         }
 		relative_position_id = tblra_go_left	
@@ -1267,8 +1270,6 @@ focus_tree = {
 		}
         completion_reward = { 
             HOL = { country_event = { id = tblra.12 } }
-            BEL = { country_event = { id = tblra.20 } }
-            LUX = { country_event = { id = tblra.21 } }
             }
         }		
 		
@@ -1278,24 +1279,27 @@ focus_tree = {
         available = {
             is_puppet = no
             is_in_faction = no
-				NOT = {
-					OR = {
-						is_in_faction = yes
-						HOL = {is_in_faction = yes}
-						HOL = {is_puppet = yes}
-						}
-					}
+			HOL = {
+				has_idea = tblra_HOL_benelux_customs_union
+			}
+			NOT = {
 				OR = {
-					has_country_flag = tblra_neutrality_debate_over	
-					AND = {
-						has_country_flag = tblra_declared_neutrality
-						threat > 0.5
-					}
-					FRA = {
-						NOT = {has_government = democratic}
-					}
+					is_in_faction = yes
+					HOL = {is_in_faction = yes}
+					HOL = {is_puppet = yes}
 				}
 			}
+			OR = {
+				has_country_flag = tblra_neutrality_debate_over	
+				AND = {
+					has_country_flag = tblra_declared_neutrality
+					threat > 0.5
+				}
+				FRA = {
+					NOT = {has_government = democratic}
+				}
+			}
+		}
         bypass = {
             OR= {
 				is_in_faction_with = HOL
@@ -1323,7 +1327,6 @@ focus_tree = {
 			news_event = { id = tblra.97 }
 			hidden_effect = {
 				set_country_flag = benelux_accepted
-				
 			}
         }
     }
@@ -1331,11 +1334,26 @@ focus_tree = {
         id = tblra_benelux_tech_sharing_group
         icon = GFX_goal_tfv_generic_tech_sharing
         available = {
-		OR ={
-			BEL = { is_faction_leader = yes }
-			HOL = { is_faction_leader = yes }
+			is_in_faction_with = HOL
+			OR ={
+				BEL = { is_faction_leader = yes }
+				HOL = { is_faction_leader = yes }
 			}
-		is_in_faction_with = HOL	
+ 			OR = {
+				NOT = {
+					HOL = {
+						focus_progress = {
+							focus = HOL_benelux_scientific_commission
+							progress > 0
+						}
+					}
+				}			
+				NOT = {
+					HOL = {
+						has_completed_focus = HOL_benelux_scientific_commission
+					}
+				}
+			}				
         }
         bypass = {
 			}			
@@ -1587,12 +1605,12 @@ focus_tree = {
         icon = GFX_goal_BEL_belgium_first
 		available = {
 			OR = {
-				has_country_flag = tblra_king_martial_law
+				has_country_flag = tblra_king_martial_law2
 				has_government = neutrality
 			}
 		}
 		bypass = {
-			has_country_flag = tblra_king_martial_law
+			has_country_flag = tblra_king_martial_law2
 		}
 		ai_will_do = {
 			factor = 35
@@ -1606,10 +1624,10 @@ focus_tree = {
     }		
     focus = {
         id = tblra_purge_radical_opposition
-        icon = GFX_goal_arrests
+        icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = tblra_king_reaction}
 		available = {
-			has_country_flag = tblra_king_martial_law
+			has_country_flag = tblra_king_martial_law2
 		}
 		ai_will_do = {
 			factor = 15
@@ -1636,7 +1654,7 @@ focus_tree = {
         icon = GFX_focus_rom_royal_dictatorship
 		prerequisite = { focus = tblra_purge_radical_opposition}		
 		available = {
-			has_country_flag = tblra_king_martial_law
+			has_country_flag = tblra_king_martial_law2
 		}
 		ai_will_do = {
 			factor = 5
@@ -1655,7 +1673,7 @@ focus_tree = {
         icon = GFX_goal_BEL_support_democracy
 		prerequisite = { focus = tblra_reduce_parlementarism}		
 		available = {
-			has_country_flag = tblra_king_martial_law
+			has_country_flag = tblra_king_martial_law2
 			any_country = {
 				is_neighbor_of = BEL
 				NOT = {has_war_with = BEL}
@@ -1795,7 +1813,7 @@ focus_tree = {
     }
     focus = {
         id = tblra_Support_the_congo_railways
-        icon = GFX_goal_generic_construct_infrastructure
+        icon = GFX_goal_COG_Jungle_Railroad
 		relative_position_id = tblra_urban_projects_capital
         x = -6
         y = 0
@@ -2381,7 +2399,7 @@ focus_tree = {
     }
     focus = {
         id = tblra_support_tungsten_mining4
-        icon = GFX_focus_generic_tungsten
+        icon = GFX_goal_tungsten_mining
 		relative_position_id = tblra_urban_projects_capital
         x = -6
         y = 4
@@ -2992,7 +3010,7 @@ focus_tree = {
     }
     focus = {
         id = tblra_Antwerp_Oil_Industry
-        icon = GFX_goal_generic_oil_refinery
+        icon = GFX_goal_refining
 		relative_position_id = tblra_urban_projects_capital
         x = -1
         y = 5
@@ -3480,8 +3498,8 @@ focus_tree = {
     }
 
     focus = {
-        id = tblra_lessons_from_wwi
-        icon = GFX_goal_generic_position_armies
+        id = tblra_wargames
+        icon = GFX_goal_wargaming
 		relative_position_id = tblra_begin_rearmement
         x = 1
         y = 1
@@ -3509,10 +3527,10 @@ focus_tree = {
     focus = {
         id = tblra_equipement_modernization
         icon = GFX_goal_generic_small_arms
-		relative_position_id = tblra_lessons_from_wwi
+		relative_position_id = tblra_wargames
         x = 0
         y = 1
-        prerequisite = { focus = tblra_lessons_from_wwi }
+        prerequisite = { focus = tblra_wargames }
         cost = 10
 		ai_will_do = {
 			factor = 5	
@@ -3542,13 +3560,28 @@ focus_tree = {
                 uses = 1
                 category = infantry_weapons
                 category = artillery
-                }
-            add_ideas = tblra_reserve_mobilization			
+			}
+            add_ideas = tblra_reserve_mobilization
+			set_technology = { bicycle_infantry = 1 }
+			division_template = {
+				name = "Cyclistes Frontière"		# border cycling units....with tank destroyers
+				division_names_group = BEL_INF_01
+				regiments = {
+					bicycle_battalion = { x = 0 y = 0 }
+					bicycle_battalion = { x = 0 y = 1 }
+					bicycle_battalion = { x = 1 y = 1 }
+					bicycle_battalion = { x = 1 y = 0 }
+					light_tank_destroyer_brigade = { x = 2 y = 0 }
+				}
+				support = {
+					recon = { x = 0 y = 0 }   
+				}
+			}			
         }
     }
     focus = {
         id = tblra_doctrines_of_the_present
-        icon = GFX_goal_generic_army_doctrines
+        icon = GFX_goal_generic_position_armies
         prerequisite = { focus = tblra_equipement_modernization }
 		relative_position_id = tblra_equipement_modernization
         x = 0
@@ -3586,9 +3619,9 @@ focus_tree = {
                 bonus = 0.5
                 uses = 1
                 category = infantry_weapons
-                }
-            }
-        }		
+			}
+		}
+	}		
     focus = {
         id = tblra_prototype_weapons
         icon = GFX_goal_generic_army_artillery2
@@ -3764,7 +3797,7 @@ focus_tree = {
 			BEL ={
 				controls_state = 6
 			}
-		6 = { is_owned_by = BEL }
+			6 = { is_owned_by = BEL }
         }		
         completion_reward = {
             air_experience = 25
@@ -3885,7 +3918,7 @@ focus_tree = {
         id = tblra_Renard_fighters
         icon = GFX_goal_generic_air_fighter
 		relative_position_id = tblra_revise_air_doctrine
-        x = 3
+        x = 4
         y = 1
         cost = 10
 		ai_will_do = {
@@ -3920,7 +3953,7 @@ focus_tree = {
         icon = GFX_goal_generic_air_bomber
 		relative_position_id = tblra_revise_air_doctrine
 		mutually_exclusive = { focus = tblra_license_production focus = tblra_Renard_fighters}
-        x = 1
+        x = 2
         y = 1 
         cost = 10
 		ai_will_do = {
@@ -3944,9 +3977,9 @@ focus_tree = {
                 technology = heavy_fighter1
                 technology = heavy_fighter2
                 technology = heavy_fighter3
-				}				
-            }
-        }	
+			}				
+		}
+	}	
 	focus = {
 		id = tblra_license_production
 		icon = GFX_goal_multiple_bombers
@@ -4064,7 +4097,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			country_event = tblra.101 ########CHANGE
+			country_event = tblra.101 ########CHANGE?
 		}
 	}
     focus = {
@@ -4164,52 +4197,13 @@ focus_tree = {
 		available_if_capitulated = yes
 		available = {
 			has_dlc = "Death or Dishonor"
+			has_tech = CAS1	
 			NOT = {
 				has_tech = CAS3
+				has_war_with = ITA
 			}
 			date > 1938.01.01
-			OR = {
-				GER = {
-					custom_trigger_tooltip = {
-						tooltip = bomber_tt
-						OR = {
-							is_available_cas_BEL = yes
-						}
-					}
-				}
-				FRA = {
-					custom_trigger_tooltip = {
-						tooltip = bomber_tt
-						OR = {
-							is_available_cas_BEL = yes
-						}
-					}
-				}
-				ITA = {
-					custom_trigger_tooltip = {
-						tooltip = bomber_tt
-						OR = {
-							is_available_cas_BEL = yes
-						}
-					}
-				}
-				ENG = {
-					custom_trigger_tooltip = {
-						tooltip = bomber_tt
-						OR = {
-							is_available_cas_BEL = yes
-						}
-					}
-				}
-				USA = {
-					custom_trigger_tooltip = {
-						tooltip = bomber_tt
-						OR = {
-							is_available_cas_BEL = yes
-						}
-					}
-				}
-			}
+			
 		}
 		
 		
@@ -4266,14 +4260,14 @@ focus_tree = {
         x = 2
         y = 2
         completion_reward = {
-		air_experience = 5
-        add_tech_bonus = {
-            name = CAS_bonus
-            bonus = 0.5
-            ahead_reduction = 0.5
-            uses = 1
-            category = cas_bomber
-            }
+			air_experience = 5
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 0.5
+				ahead_reduction = 0.5
+				uses = 1
+				category = cas_bomber
+			}
         }
     }
 
@@ -4321,6 +4315,7 @@ focus_tree = {
                 bonus = 0.5
                 uses = 2
                 category = air_doctrine
+			}
         34 = {
             add_building_construction = {
                 type = air_base
@@ -4328,9 +4323,8 @@ focus_tree = {
                 instant_build = yes
                 }
             }
-        }
-    }
-}
+		}
+	}
     focus = {
         id = tblra_start_rocket_program
         icon = GFX_focus_rocketry
@@ -4353,9 +4347,9 @@ focus_tree = {
 	}
     focus = {
         id = tblra_recreate_the_navy
-        icon = GFX_goal_generic_navy_doctrines_tactics
+        icon = GFX_focus_generic_destroyer
 		mutually_exclusive = { focus = tblra_belgian_navy_in_exile }
-        x = 50
+        x = 51
         y = 0
         cost = 10
 		ai_will_do = {
@@ -4528,7 +4522,7 @@ focus_tree = {
                 ahead_reduction = 1
                 uses = 1
 				category = ss_tech
-                } 
+		} 
 		if = {
 			limit = {	
 				BEL ={
@@ -4603,9 +4597,9 @@ focus_tree = {
                 bonus = 0.5
                 uses = 1
 				category = cv_tech
-                }
-        navy_experience = 10
-		air_experience = 10
+			}
+			navy_experience = 10
+			air_experience = 10
         }
     }	
 
@@ -4614,7 +4608,7 @@ focus_tree = {
         icon  = GFX_goal_generic_wolf_pack
 		relative_position_id = tblra_recreate_the_navy
         x = 1
-        y = 4
+        y = 2
         cost = 10
 		ai_will_do = {
 			factor = 4			

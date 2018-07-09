@@ -135,6 +135,7 @@ ideas = {
 			allowed = {
 				NOT = {
 					has_government = communism
+					original_tag = BEL
 				}
 			}
 
@@ -173,6 +174,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
+				original_tag = BEL
 				NOT = {
 					has_government = communism
 				}
@@ -191,6 +193,7 @@ ideas = {
 				}
 
 			allowed_civil_war = {
+				original_tag = BEL
 				NOT = {
 					has_government = communism
 				}
@@ -205,6 +208,7 @@ ideas = {
 			picture = tblra_leopold3_power
 
 			allowed_civil_war = {
+				original_tag = BEL
 				has_government = neutrality
 			}
 			
@@ -345,7 +349,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
 
 			removal_cost = -1
@@ -378,7 +382,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
 
 			removal_cost = -1
@@ -396,7 +400,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
 
 			removal_cost = -1
@@ -449,7 +453,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
 
 			removal_cost = -1
@@ -466,7 +470,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
 
 			removal_cost = -1
@@ -508,7 +512,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
 
 			removal_cost = -1
@@ -530,7 +534,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
 
 			removal_cost = -1
@@ -550,7 +554,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
 
 			removal_cost = -1
@@ -569,7 +573,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
 
 			removal_cost = -1
@@ -588,7 +592,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
 
 			removal_cost = -1
@@ -607,7 +611,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
 
 			removal_cost = -1
@@ -626,7 +630,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
 
 			removal_cost = -1
@@ -645,7 +649,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
 
 			removal_cost = -1
@@ -679,7 +683,7 @@ ideas = {
 				always = no # Added via focus
 			}
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
 			
 			research_bonus = {
@@ -1115,24 +1119,24 @@ ideas = {
 				factor = 1
 				modifier = {
 					factor = 0
-						BEL = {
-							OR = {
-								NOT = {
-									has_completed_focus = tblra_form_coalition_government
-								}
-								AND = {
-									has_completed_focus = tblra_go_left
-									date < 1939.1.1	
-								}
-								AND = {
-									has_completed_focus = tblra_go_right
-									date < 1939.1.1	
-								}
+					BEL = {
+						OR = {
+							NOT = {
+								has_completed_focus = tblra_form_coalition_government
 							}
-						}						
-					}
+							AND = {
+								has_completed_focus = tblra_go_left
+								date < 1939.1.1	
+							}
+							AND = {
+								has_completed_focus = tblra_go_right
+								date < 1939.1.1	
+							}
+						}
+					}						
 				}
 			}
+		}
 		
 
 		BEL_gaston_eyskens = {
@@ -1218,7 +1222,7 @@ ideas = {
 								AND = {
 									has_completed_focus = tblra_go_right
 									date < 1939.1.1	
-									}
+								}
 							}
 						}
 					}
@@ -1437,13 +1441,13 @@ ideas = {
 							WLL = {
 								NOT = {
 										has_completed_focus = WLL_nationalism_focus
-									}								
-								}
+								}								
 							}
 						}
 					}
 				}
 			}
+		}
 		BEL_Jose_Streel = {
 
 			allowed = {
@@ -2900,7 +2904,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
 
 			removal_cost = -1
@@ -2921,7 +2925,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
 
 			removal_cost = -1
@@ -2943,7 +2947,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
 
 			removal_cost = -1
@@ -2965,7 +2969,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
 
 			removal_cost = -1

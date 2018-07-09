@@ -630,6 +630,20 @@ spriteTypes = {
 		name = "GFX_erwache_isabella"
 		texturefile = "gfx/event_pictures/erwache_isabella.dds"
 	}
+
+###------> HOL <><> <><> <><> <><> <><>
+	spriteType = {
+		name = "GFX_report_event_hendrikus_colijn_government"
+		texturefile = "gfx/event_pictures/report_event_HOL_hendrikus_colijn_government.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_dirk_de_geer_government"
+		texturefile = "gfx/event_pictures/report_event_HOL_de_geer_governement.dds"
+	}	
+	spriteType = {
+		name = "GFX_news_event_mussert_discourse"
+		texturefile = "gfx/event_pictures/news_event_mussert_discourse.dds"
+	}
 	
 ###------> KMT <><> <><> <><> <><> <><>
 	

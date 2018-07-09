@@ -2302,6 +2302,34 @@ spriteTypes = {
 	}
 ###------> HOL <><> <><> <><> <><> <><>
 
+	spriteType = { #Auto-Generated
+		name = "GFX_idea_HOL_maximilien_steenberghe"
+		texturefile = "gfx/interface/ideas/HOL_max_steenberghe.dds"
+	}	
+	spriteType = { #Auto-Generated
+		name = "GFX_idea_HOL_louis_beel"
+		texturefile = "gfx/interface/ideas/HOL_louis_beel.dds"
+	}	
+	spriteType = { #Auto-Generated
+		name = "GFX_idea_HOL_jan_willem_termijtelen"
+		texturefile = "gfx/interface/ideas/HOL_jan_willem_termijtelen.dds"
+	}	
+	spriteType = { #Auto-Generated
+		name = "GFX_idea_HOL_jan_willem_termijtelen2"
+		texturefile = "gfx/interface/ideas/HOL_jan_willem_termijtelen.dds"
+	}
+	spriteType = { #Auto-Generated
+		name = "GFX_idea_HOL_robert_van_genechten"
+		texturefile = "gfx/interface/ideas/HOL_robert_van_genechten.dds"
+	}
+	spriteType = { #Auto-Generated
+		name = "GFX_idea_HOL_willem_schermerhorn"
+		texturefile = "gfx/interface/ideas/HOL_willem_schermerhorn.dds"
+	}	
+	spriteType = { #Auto-Generated
+		name = "GFX_idea_HOL_andries_dirk_de_graaf"
+		texturefile = "gfx/interface/ideas/HOL_andries_dirk_de_graaf.dds"
+	}	
 	spriteType = {
 		name = "GFX_idea_HOL_godfried_van_voorst_tot_voorst"
 		texturefile = "gfx/interface/ideas/HOL_godfried_van_voorst_tot_voorst.dds"
@@ -2362,25 +2390,19 @@ spriteTypes = {
 		name = "GFX_idea_HOL_max_de_marchant_et_d_ansembourg"
 		texturefile = "gfx/interface/ideas/HOL_max_de_marchant_et_d_ansembourg.dds"
 	}	
+	
+	
 	spriteType = {
 		name = "GFX_idea_koolhoven"
 		texturefile = "gfx/interface/ideas/Koolhoven.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_HOL_philips"
-		texturefile = "gfx/interface/ideas/goal_philips.dds"
-	}
-	SpriteType = {
-		name = "GFX_refining"
-		texturefile = "gfx/interface/goals/Refining.dds"	
-	}
-	SpriteType = {
-		name = "GFX_goal_wargaming"
-		texturefile = "gfx/interface/goals/goal_wargaming.dds"	
+		texturefile = "gfx/interface/ideas/Philips.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_HOL_royal_dutch_shell"
-		texturefile = "gfx/interface/ideas/royal_dutch_shell.dds"
+		texturefile = "gfx/interface/ideas/Shell.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_fokker"
@@ -2388,15 +2410,47 @@ spriteTypes = {
 	}	
 	spriteType = {
 		name = "GFX_idea_artillerie_inrichtingen"
-		texturefile = "gfx/interface/ideas/ai_hembrug.dds"
+		texturefile = "gfx/interface/ideas/AIHembrug.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_HOL_DAF_trucks"
-		texturefile = "gfx/interface/ideas/daf_trucks.dds"
+		texturefile = "gfx/interface/ideas/DAF.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_HOL_Hoogovens"
+		texturefile = "gfx/interface/ideas/HOL_Hoogovens.dds"
+	}	
+	spriteType = {
+		name = "GFX_idea_HOL_werkspoor_nv"
+		texturefile = "gfx/interface/ideas/HOL_werkspoor_nv.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_wilton_fijenoord"
+		texturefile = "gfx/interface/ideas/HOL_wilton_fijenoord.dds"
+	}	
+	spriteType = {
 		name = "GFX_idea_nsm_amsterdam"
-		texturefile = "gfx/interface/ideas/ndsm_amsterdam.dds"
+		texturefile = "gfx/interface/ideas/HOL_nsm_amsterdam.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_aviolanda"
+		texturefile = "gfx/interface/ideas/HOL_aviolanda.dds"
+	}	
+	spriteType = {
+		name = "GFX_idea_hih_siderius"
+		texturefile = "gfx/interface/ideas/HOL_siderius.dds"
+	}	
+	spriteType = {
+		name = "GFX_idea_HOL_reliance_on_the_gold_standard"
+		texturefile = "gfx/interface/ideas/HOL_reliance_on_the_gold_standard.dds"
+	}	
+	spriteType = {
+		name = "GFX_idea_HOL_wilhelmina"
+		texturefile = "gfx/interface/ideas/HOL_wilhelmina.dds"
+	}	
+	spriteType = {
+		name = "GFX_idea_HOL_motors_production"
+		texturefile = "gfx/interface/ideas/HOL_motors_production.dds"
 	}
 	
 ###------> HON <><> <><> <><> <><> <><>
@@ -2590,6 +2644,37 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_INS_economy_idea"
 		texturefile = "gfx/interface/ideas/INS_economy_idea.dds"
+	}
+
+###------> LUX <><> <><> <><> <><> <><>	
+	
+	spriteType = { #Auto-Generated
+		name = "GFX_idea_ARBED"
+		texturefile = "gfx/interface/ideas/ARBED.dds"
+	}
+	spriteType = { #Auto-Generated
+		name = "GFX_idea_LUX_felix_de_bourbon_parme2"
+		texturefile = "gfx/interface/ideas/LUX_felix_bourbon_parme.dds"
+	}
+	spriteType = { #Auto-Generated
+		name = "GFX_idea_LUX_felix_de_bourbon_parme"
+		texturefile = "gfx/interface/ideas/LUX_felix_bourbon_parme.dds"
+	}
+	spriteType = { #Auto-Generated
+		name = "GFX_idea_LUX_pierre_dupong"
+		texturefile = "gfx/interface/ideas/LUX_pierre_dupong.dds"
+	}
+	spriteType = { #Auto-Generated
+		name = "GFX_idea_LUX_mathias_krier"
+		texturefile = "gfx/interface/ideas/LUX_krieger.dds"
+	}
+	spriteType = { #Auto-Generated
+		name = "GFX_idea_LUX_emile_speller"
+		texturefile = "gfx/interface/ideas/LUX_speller.dds"
+	}
+	spriteType = { #Auto-Generated
+		name = "GFX_idea_LUX_pierre_krier"
+		texturefile = "gfx/interface/ideas/LUX_pierre_krier.dds"
 	}
 	
 ###------> MEX <><> <><> <><> <><> <><>

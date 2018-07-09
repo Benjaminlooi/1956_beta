@@ -1105,6 +1105,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/goal_manpower.dds"
 				
 	}
+	SpriteType = {
+		name = "GFX_goal_wargaming"
+		texturefile = "gfx/interface/goals/goal_wargaming.dds"	
+	}	
 	SpriteType = { 
 		name = "GFX_goal_waking_the_tiger"
 		texturefile = "gfx/interface/goals/goal_waking_the_tiger.dds"
@@ -1255,6 +1259,18 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_HOL_the_new_ideal"
 		texturefile = "gfx/interface/goals/goal_HOL_the_new_ideal.dds"	
+	}	
+	SpriteType = {
+		name = "GFX_goal_ammunitions"
+		texturefile = "gfx/interface/goals/goal_ammunitions.dds"	
+	}
+	SpriteType = {
+		name = "GFX_goal_philips"
+		texturefile = "gfx/interface/goals/goal_philips.dds"	
+	}	
+	SpriteType = {
+		name = "GFX_goal_flag_indonesia_communist"
+		texturefile = "gfx/interface/goals/goal_flag_indonesia_communist.dds"	
 	}	
 	SpriteType = {
 		name = "GFX_goal_focus_chilean_deal"
@@ -1741,7 +1757,22 @@ spriteTypes = {
 		name = "GFX_goal_CAN_maple_leaf"
 		texturefile = "gfx/interface/goals/goal_CAN_maple_leaf.dds"
 	}	
-	
+	SpriteType = {
+		name = "GFX_goal_HOL_fokker"
+		texturefile = "gfx/interface/goals/Goal_HOL_fokker.dds"	
+	}	
+	SpriteType = {
+		name = "GFX_goal_HOL_jeugdstorm"
+		texturefile = "gfx/interface/goals/goal_HOL_jeugdstorm.dds"	
+	}	
+	SpriteType = {
+		name = "GFX_goal_HOL_werkspoor"
+		texturefile = "gfx/interface/goals/goal_HOL_werkspoor.dds"	
+	}	
+	SpriteType = {
+		name = "GFX_goal_HOL_ditch_gold_standard"
+		texturefile = "gfx/interface/goals/goal_HOL_ditch_gold_standard.dds"	
+	}	
 	
 	SpriteType = {
 		name = "GFX_1_6_goal_ENG_sun_never_sets"
